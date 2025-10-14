@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pratik — Resume</title>
+  <meta name="description" content="Pratik • AI/ML Engineer — Resume & Portfolio" />
+  <meta property="og:title" content="Pratik — Resume" />
+  <meta property="og:description" content="AI/ML • Deep Learning • NLP • Data Science" />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #111319;
+      --text: #e6e7ea;
+      --muted: #b6b8be;
+      --brand: #7c5cff;
+      --brand-2: #22c55e;
+      --border: #1d2130;
+      --shadow: 0 8px 30px rgba(0,0,0,.25);
+      --radius: 16px;
+      --font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb; --panel:#ffffff; --text:#0f1222; --muted:#535b6b; --border:#e6e8ef; --shadow:0 12px 24px rgba(2,6,23,.08)
+      }
+    }
+    html,body{height:100%;}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px;margin-inline:auto;padding:28px}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:color-mix(in hsl, var(--bg) 85%, transparent);border-bottom:1px solid var(--border);z-index:20}
+    .nav{display:flex;gap:18px;align-items:center;justify-content:space-between}
+    .nav a{color:var(--muted)}
+    .nav a:hover{color:var(--text)}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--text)}
+    .brand-badge{inline-size:12px;block-size:12px;border-radius:999px;background:linear-gradient(135deg,var(--brand),#60a5fa)}
+    .row{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:900px){.row{grid-template-columns:1.2fr .8fr}}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    h1{font-size:38px;line-height:1.15;margin:8px 0 10px}
+    h2{font-size:22px;margin:0 0 6px}
+    h3{font-size:18px;margin:0 0 2px}
+    .muted{color:var(--muted)}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:color-mix(in hsl, var(--panel) 90%, transparent);font-size:13px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--panel);color:var(--text);box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(180deg,var(--brand),#5b39ff);border:none}
+    .btn.ghost{background:transparent}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:700px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+    .timeline{display:grid;gap:14px}
+    .item{padding:16px;border:1px solid var(--border);border-radius:14px;background:color-mix(in hsl, var(--panel) 92%, transparent)}
+    .item h3{margin-bottom:4px}
+    .item .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+    footer{padding:40px 0;color:var(--muted);text-align:center}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap}
+    .right{display:flex;gap:10px;align-items:center}
+    .section-title{display:flex;align-items:center;gap:10px;margin:8px 0 14px}
+    .section-title svg{opacity:.85}
+    .project-card{display:flex;flex-direction:column;gap:8px;padding:16px;border:1px solid var(--border);border-radius:14px}
+    .project-card .meta{font-size:13px;color:var(--muted)}
+    .kbd{font:600 12px/1 var(--font);padding:4px 6px;border-radius:6px;border:1px solid var(--border);background:color-mix(in hsl, var(--panel) 88%, transparent)}
+  </style>
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="brand">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span>Pratik — Resume</span>
+      </div>
+      <nav class="right">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <button class="btn ghost" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <section class="row" aria-labelledby="hero-title">
+      <div class="card">
+        <p class="chip" aria-label="Tagline"><span>AI/ML • Deep Learning • NLP</span></p>
+        <h1 id="hero-title">Pratik</h1>
+        <p class="muted">Data Scientist & ML Engineer focused on **Deep Learning**, **NLP**, and **time series**. Building accurate models and clean data pipelines; turning ideas into production systems.</p>
+        <div class="toolbar" style="margin-top:12px">
+          <a class="btn primary" href="#contact">Contact</a>
+          <button class="btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+          <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:hello@example.com">Email</a>
+        </div>
+      </div>
+      <aside class="card">
+        <h2 class="section-title">Quick Info</h2>
+        <div class="grid">
+          <div><span class="muted">Location</span><br>Erlangen / Nürnberg, DE</div>
+          <div><span class="muted">Open to</span><br>Data Scientist, ML Engineer</div>
+          <div><span class="muted">Focus</span><br>DL, NLP, RL, Time Series</div>
+          <div><span class="muted">Languages</span><br>EN (C1), DE (B2)</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">About</h2>
+      <p>
+        I’m a hands-on ML engineer who loves building **end-to-end** systems: from feature design and training to
+        deployment and monitoring. Recent work includes **RAG for German contracts**, **SARIMA for electricity prices**, and
+        NLP pipelines for finance.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card" aria-labelledby="exp-title">
+      <div class="section-title"><h2 id="exp-title">Experience</h2></div>
+      <div class="timeline">
+        <article class="item">
+          <h3>Mediaphon — Data Scientist</h3>
+          <div class="meta"><span>2025 — Present</span><span>Germany</span></div>
+          <ul>
+            <li>Built **ML models** for prediction & classification; designed **data pipelines** in Python.</li>
+            <li>Used **Deep Learning** (CNN/RNN) and **NLP** to analyse text; tracked metrics (F1/ROC-AUC).</li>
+            <li>Automated training & evaluation jobs; improved reliability and runtime.</li>
+          </ul>
+        </article>
+        <article class="item">
+          <h3>FAU — Tutor, Machine Learning in Finance</h3>
+          <div class="meta"><span>2024 — 2025</span><span>Erlangen</span></div>
+          <ul>
+            <li>Taught **AI/ML** basics (regression, classification, neural nets, overfitting).</li>
+            <li>Guided time-series modelling (ARIMA, simple DL) on **financial data**.</li>
+            <li>Created **Python notebooks** (pandas, scikit-learn); supported students.</li>
+          </ul>
+        </article>
+        <article class="item">
+          <h3>StoxBox — ML Engineer</h3>
+          <div class="meta"><span>2023 — 2024</span><span>Remote</span></div>
+          <ul>
+            <li>Owned **NLP** features: summarization, sentiment, keyword extraction for market news.</li>
+            <li>Trained & tuned **deep-learning** models; shipped inference on **AWS** (S3, EC2/Lambda).</li>
+            <li>Automated ETL, validation, reporting → faster insights & fewer manual steps.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card" aria-labelledby="proj-title">
+      <div class="section-title"><h2 id="proj-title">Projects</h2></div>
+      <div class="grid grid-2">
+        <article class="project-card">
+          <h3>RAG for German Contract Analysis</h3>
+          <p class="meta">NLP • RAG • Extraction</p>
+          <p>Built a retrieval-augmented pipeline to extract parties, dates, and clauses from German contracts.</p>
+          <div class="toolbar"><a class="btn" href="#">GitHub ↗</a><span class="kbd">Python</span><span class="kbd">Faiss</span><span class="kbd">FastAPI</span></div>
+        </article>
+        <article class="project-card">
+          <h3>Electricity Price Forecast</h3>
+          <p class="meta">SARIMA • Time Series</p>
+          <p>Predicts day-ahead prices with seasonal ARIMA; reports MAE/RMSE and confidence intervals.</p>
+          <div class="toolbar"><a class="btn" href="#">GitHub ↗</a><span class="kbd">statsmodels</span><span class="kbd">Plotly</span></div>
+        </article>
+        <article class="project-card">
+          <h3>Incident Detection (Vision)</h3>
+          <p class="meta">DL • Segmentation</p>
+          <p>Detects fights/robberies/explosions from video frames via segmentation and custom CNN.</p>
+          <div class="toolbar"><a class="btn" href="#">GitHub ↗</a><span class="kbd">PyTorch</span><span class="kbd">OpenCV</span></div>
+        </article>
+        <article class="project-card">
+          <h3>Agentic AI Minimal</h3>
+          <p class="meta">LLM • Tools</p>
+          <p>Small ReAct-style agent with web search, URL fetch, and file tools—no heavy frameworks.</p>
+          <div class="toolbar"><a class="btn" href="#">GitHub ↗</a><span class="kbd">Python</span><span class="kbd">OpenAI</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card" aria-labelledby="skills-title">
+      <div class="section-title"><h2 id="skills-title">Skills</h2></div>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">PyTorch</span>
+        <span class="chip">scikit-learn</span>
+        <span class="chip">NLP</span>
+        <span class="chip">RAG</span>
+        <span class="chip">Time Series</span>
+        <span class="chip">AWS (S3, EC2, Lambda)</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Git/GitHub</span>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="card" aria-labelledby="edu-title">
+      <div class="section-title"><h2 id="edu-title">Education</h2></div>
+      <div class="item">
+        <h3>M.Sc. Data Science — FAU</h3>
+        <div class="meta"><span>2023 — 2025</span><span>Erlangen-Nürnberg</span></div>
+        <p class="muted">Thesis: RL-based base-station placement for wireless localization.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <div class="section-title"><h2 id="contact-title">Contact</h2></div>
+      <p>Email: <a href="mailto:hello@example.com">hello@example.com</a>
+        · GitHub: <a href="https://github.com/" target="_blank" rel="noopener">github.com/yourname</a>
+        · LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/yourname</a>
+      </p>
+      <p class="muted">Tip: click <strong>Print / Save PDF</strong> above to export this page as a résumé PDF.</p>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Pratik — Last updated automatically when you deploy.
+        · <a href="#top">Back to top</a>
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    // --- theme toggle with localStorage ---
+    const btn = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const stored = localStorage.getItem('theme');
+    let dark = stored ? stored === 'dark' : prefersDark;
+    document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+    btn.textContent = dark ? '🌞' : '🌙';
+    btn.addEventListener('click', () => {
+      dark = !dark;
+      document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      btn.textContent = dark ? '🌞' : '🌙';
+    });
+
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth anchor scroll (basic)
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+    }));
+  </script>
+</body>
+</html>
